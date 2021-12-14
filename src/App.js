@@ -6,6 +6,7 @@ import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
+import DogThings from './pages/DogThings/DogThings'
 
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
@@ -129,6 +130,36 @@ const App = () => {
     },
   ])
 
+  const [liamsThings, setLiamsThings] = useState([
+    {
+      name: 'Poptart®',
+      image: 'https://i.imgur.com/q9zgcaP.jpg',
+      attributes: ['pastry?', 'food?', 'edible?', 'Horrible when toasted!'],
+    },
+    {
+      name: 'React hooks',
+      image:
+        'https://images.unsplash.com/photo-1518644730709-0835105d9daa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+      attributes: [
+        'useEffect',
+        'useState',
+        'not a taco',
+        "state's best friend",
+      ],
+    },
+    {
+      name: "energy drinks",
+      image: "https://imgs.xkcd.com/comics/functional.png",  
+      attributes: ["efficient", "reusability", "not a taco", "beautiful"],
+    },
+    {
+      name: 'waffle',
+      image:
+        'https://images.unsplash.com/photo-1568051243851-f9b136146e97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80',
+      attributes: ['tasty', 'fluffy', 'breakfast', 'yummy'],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -148,6 +179,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-dog-things"
+        element={<DogThings things={liamsThings} />}
       />
     </Routes>
   )
