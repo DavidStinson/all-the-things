@@ -5,6 +5,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import ThrowBackThings from './pages/ThrowbackThings/ThrowbackThings'
 import Landing from './pages/Landing/Landing'
 import DogThings from './pages/DogThings/DogThings'
 
@@ -159,6 +160,29 @@ const App = () => {
       attributes: ['tasty', 'fluffy', 'breakfast', 'yummy'],
     },
   ])
+  
+  const [samsThings, setSamsThings] = useState ([
+    {
+      name: "Banana for Scale",
+      image: "https://uploads.dailydot.com/c23/15/39ebf638f97319f404e3fd2faa6101cd.jpg?auto=compress%2Cformat&ixlib=php-3.3.0",  
+      attributes: ["necessary", "reusability", "science", "potassium"],
+    },
+    {
+      name: "Ladies eating salads",
+      image: "https://veganfeministnetwork.com/wp-content/uploads/2015/10/12004741_939867782740915_1213916018450835655_n.jpg",
+      attributes: ["fiber", "dressing on the side", "basic", "lolz"], 
+    },
+    {
+      name: "Business Cat",
+      image: "https://i.kym-cdn.com/photos/images/original/000/176/107/business-cat.jpg",
+      attributes: ["how I feel in offices", "synergy", "ping me later", "donuts", "a/c"],
+    },
+    { 
+      name: "Dodge", 
+      image: "https://images.hindustantimes.com/img/2021/11/03/550x309/Doge_meme_dog_birthday_1635925455510_1635925462309.PNG", 
+      attributes: ["much wow", "how-pronounce", "so mystery", "such scare"], 
+    },
+  ])
 
   return (
     <Routes>
@@ -179,6 +203,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-throwback-things"
+        element={<ThrowBackThings things={samsThings} />}
       />
       <Route
         path="/the-dog-things"
